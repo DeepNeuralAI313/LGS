@@ -11,16 +11,19 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Image Carousel Logic
+// Create seamless carousel effect by duplicating images
 const carousel = document.querySelector('.carousel');
 const images = carousel.children;
-const totalImages = 22; // Set your total images
+const totalImages = images.length;
 
-// Clone images for infinite loop
+// Clone images for seamless loop
 for(let i = 0; i < totalImages; i++) {
     const clone = images[i].cloneNode(true);
     carousel.appendChild(clone);
 }
+
+// Adjust animation duration based on number of images
+carousel.style.animationDuration = `${totalImages * 3}s`;
 
 // Pause on hover
 carousel.addEventListener('mouseenter', () => {
