@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
 // Image Carousel Logic
 const carousel = document.querySelector('.carousel');
 const images = carousel.children;
-const totalImages = 15; // Set your total images
+const totalImages = 22; // Set your total images
 
 // Clone images for infinite loop
 for(let i = 0; i < totalImages; i++) {
